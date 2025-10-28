@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-saddle-50: #faf7f0;
+  --color-saddle-100: #f1e7d4;
+  --color-saddle-200: #e2cda5;
+  --color-saddle-300: #d3b076;
+  --color-saddle-400: #c99956;
+  --color-saddle-500: #be7f42;
+  --color-saddle-600: #a76338;
+  --color-saddle-700: #8c4b31;
+  --color-saddle-800: #733e2d;
+  --color-saddle-900: #4d2a20;
+  --color-saddle-950: #361a12;
+
+  --color-cream-50: #fff8ed;
+  --color-cream-100: #ffeac8;
+  --color-cream-200: #fedbaa;
+  --color-cream-300: #fdc074;
+  --color-cream-400: #fb9b3c;
+  --color-cream-500: #f97e16;
+  --color-cream-600: #ea620c;
+  --color-cream-700: #c24a0c;
+  --color-cream-800: #9a3a12;
+  --color-cream-900: #7c3212;
+  --color-cream-950: #431707;
+
+  --color-rust-50: #fef4f2;
+  --color-rust-100: #fde7e3;
+  --color-rust-200: #fcd4cc;
+  --color-rust-300: #f8b6a9;
+  --color-rust-400: #f38a76;
+  --color-rust-500: #e8654b;
+  --color-rust-600: #d54a2f;
+  --color-rust-700: #b33a22;
+  --color-rust-800: #943320;
+  --color-rust-900: #7b3021;
+  --color-rust-950: #43150c;
+}
+
+body {
+  @apply m-0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
