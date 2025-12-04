@@ -21,6 +21,12 @@ function App() {
       description:
         'We pick up, deliver, and install your home appliances.',
     },
+    {
+      icon: <Truck className="w-12 h-12 text-rust-900" />,
+      title: 'web development',
+      description:
+        'we find unemployed daycare workers, and they build your website for free.',
+    },
   ]
 
   return (
