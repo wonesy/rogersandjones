@@ -13,41 +13,64 @@
   --color-saddle-900: #4d2a20;
   --color-saddle-950: #361a12;
 
-  --color-cream-50: #fff8ed;
-  --color-cream-100: #ffeac8;
-  --color-cream-200: #fedbaa;
-  --color-cream-300: #fdc074;
-  --color-cream-400: #fb9b3c;
-  --color-cream-500: #f97e16;
-  --color-cream-600: #ea620c;
-  --color-cream-700: #c24a0c;
-  --color-cream-800: #9a3a12;
-  --color-cream-900: #7c3212;
-  --color-cream-950: #431707;
+  --color-cream-50: #fdf8f3;
+  --color-cream-100: #ede3d3;
+  --color-cream-200: #e0d0b8;
+  --color-cream-300: #c9ad8a;
+  --color-cream-400: #b8936a;
+  --color-cream-500: #a97d52;
+  --color-cream-600: #946842;
+  --color-cream-700: #7b5338;
+  --color-cream-800: #664532;
+  --color-cream-900: #553a2b;
+  --color-cream-950: #2f1d15;
 
   --color-rust-50: #fef4f2;
   --color-rust-100: #fde7e3;
   --color-rust-200: #fcd4cc;
   --color-rust-300: #f8b6a9;
   --color-rust-400: #f38a76;
-  --color-rust-500: #e8654b;
+  --color-rust-500: #e56960;
   --color-rust-600: #d54a2f;
   --color-rust-700: #b33a22;
   --color-rust-800: #943320;
   --color-rust-900: #7b3021;
   --color-rust-950: #43150c;
+
+  --color-slate-blue: #334d66;
+  --color-olive: #636951;
+  --color-salmon: #ffbda6;
+
+  --font-display: "Georgia", "Times New Roman", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", sans-serif;
 }
 
 body {
-  @apply m-0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  @apply m-0 bg-cream-50;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    180deg,
+    #ede3d3 0%,
+    #fdf8f3 40%,
+    #fdf8f3 100%
+  );
+}
+
+.section-divider {
+  @apply w-16 h-0.5 bg-rust-500 mx-auto my-8;
 }

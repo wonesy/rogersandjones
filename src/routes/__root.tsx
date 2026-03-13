@@ -3,6 +3,7 @@ import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 import appCss from '../styles.css?url'
 
@@ -17,7 +18,12 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Rogers & Jones',
+        title: 'Rogers & Jones | Construction, Repairs & Plumbing in Helsinki',
+      },
+      {
+        name: 'description',
+        content:
+          'Helsinki-based contractor specialising in construction, renovation, and plumbing across the capital region. Nordic craftsmanship, no shortcuts.',
       },
     ],
     links: [
@@ -40,6 +46,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body>
         <Header />
         {children}
+        <Footer />
         {import.meta.env.DEV && (
           <TanStackDevtools
             config={{

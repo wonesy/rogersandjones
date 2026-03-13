@@ -1,61 +1,73 @@
 import { Link } from '@tanstack/react-router'
-
 import { useState } from 'react'
-import {
-  ChevronDown,
-  ChevronRight,
-  Home,
-  Menu,
-  Network,
-  SquareFunction,
-  StickyNote,
-  X,
-} from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+
+const navLinks = [
+  { label: 'Services', href: '#services' },
+  { label: 'About', href: '#about' },
+  { label: 'Locations', href: '#locations' },
+  { label: 'Reviews', href: '#reviews' },
+  { label: 'Contact', href: '#contact' },
+]
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const [groupedExpanded, setGroupedExpanded] = useState<
-    Record<string, boolean>
-  >({})
 
   return (
-    <>
-      <header className="p-4 flex justify-center items-center w-full text-white shadow-lg bg-cream-100">
-        <img src="/logo.png" alt="Rogers & Jones Logo" className='h-40' />
+    <header className="sticky top-0 z-50 bg-cream-50/95 backdrop-blur-sm border-b border-cream-200">
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-20">
+        <Link to="/" className="flex items-center gap-3">
+          <img src="/logo.png" alt="Rogers & Jones" className="h-14" />
+        </Link>
 
-      </header>
-
-      <aside
-        className={`fixed top-0 left-0 h-full w-80 bg-gray-900 text-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
-        <div className="flex items-center justify-between p-4 border-b border-gray-700">
-          <h2 className="text-xl font-bold">Navigation</h2>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
-            aria-label="Close menu"
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-saddle-800 hover:text-rust-500 transition-colors text-sm tracking-wide uppercase font-medium"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            className="bg-rust-500 hover:bg-rust-600 text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-colors tracking-wide"
           >
-            <X size={24} />
-          </button>
-        </div>
-
-        <nav className="flex-1 p-4 overflow-y-auto">
-          <Link
-            to="/"
-            onClick={() => setIsOpen(false)}
-            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
-            activeProps={{
-              className:
-                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2',
-            }}
-          >
-            <Home size={20} />
-            <span className="font-medium">Home</span>
-          </Link>
+            Get a Quote
+          </a>
         </nav>
-      </aside>
-    </>
+
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden p-2 text-saddle-800 hover:text-rust-500 transition-colors"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {isOpen && (
+        <div className="md:hidden bg-cream-50 border-t border-cream-200 px-6 py-4">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="block py-3 text-saddle-800 hover:text-rust-500 transition-colors text-sm tracking-wide uppercase font-medium border-b border-cream-200 last:border-0"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            onClick={() => setIsOpen(false)}
+            className="block mt-4 bg-rust-500 hover:bg-rust-600 text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-colors tracking-wide text-center"
+          >
+            Get a Quote
+          </a>
+        </div>
+      )}
+    </header>
   )
 }
