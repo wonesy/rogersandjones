@@ -16,8 +16,8 @@ export const translations = {
       ourServices: 'Palvelumme',
     },
     stats: {
-      yearsValue: '20+',
-      yearsLabel: 'Vuotta Suomessa',
+      yearsValue: '15+',
+      yearsLabel: 'Vuotta kokemusta',
       projectsValue: '5 000+',
       projectsLabel: 'Valmista projektia',
       ratingValue: '4.9',
@@ -53,13 +53,13 @@ export const translations = {
     about: {
       title: 'Pohjoismaista käsityötaitoa, ei oikoteitä.',
       paragraph1:
-        'Rogers & Jones perustettiin Helsingissä kahden urakoitsijan toimesta, joita yhdisti yksinkertainen periaate: tee se oikein tai älä tee ollenkaan. Yli kaksikymmentä vuotta myöhemmin tämä periaate ohjaa jokaista projektia.',
+        'Rogers & Jones perustettiin Helsingissä kahden urakoitsijan toimesta, joita yhdisti yksinkertainen periaate: tee se oikein tai älä tee ollenkaan. Yli viisitoista vuotta myöhemmin tämä periaate ohjaa jokaista projektia.',
       paragraph2:
         'Tunnemme suomalaiset rakennusmääräykset läpikotaisin. Työskentelemme kovimmissakin talvissa ja toimitamme tuloksia, jotka kestävät vuosikymmeniä. Tiimimme ovat paikallisia, lisensoituja ja ylpeitä työstään pääkaupunkiseudulla.',
       ctaText: 'Kerro meille projektistasi',
       quoteText:
         'Suomessa rakennuksen pitää kestää kaikkea — kolmenkymmenen asteen pakkaset, kevättulvat, loputon kesävalo. Me rakennamme kaikkea sitä varten.',
-      quoteAttribution: '— Mike Rogers, perustaja',
+      quoteAttribution: '— Keelan Rogers, perustaja',
     },
     locations: {
       title: 'Koko pääkaupunkiseudulla.',
@@ -144,8 +144,8 @@ export const translations = {
       ourServices: 'Our Services',
     },
     stats: {
-      yearsValue: '20+',
-      yearsLabel: 'Years in Finland',
+      yearsValue: '15+',
+      yearsLabel: 'Years of Experience',
       projectsValue: '5,000+',
       projectsLabel: 'Projects Completed',
       ratingValue: '4.9',
@@ -181,13 +181,13 @@ export const translations = {
     about: {
       title: 'Nordic craftsmanship, no shortcuts.',
       paragraph1:
-        "Rogers & Jones was founded in Helsinki by two contractors who shared a simple belief: build it right, or don't build it at all. Over twenty years later, that principle drives every project we take on.",
+        "Rogers & Jones was founded in Helsinki by two contractors who shared a simple belief: build it right, or don't build it at all. Over fifteen years later, that principle drives every project we take on.",
       paragraph2:
         'We know Finnish building codes inside and out. We work through the harshest winters and deliver results that last for decades. Our crews are local, licensed, and proud of the work they do across the Helsinki region.',
       ctaText: 'Talk to us about your project',
       quoteText:
         'In Finland, a building has to survive everything — minus thirty winters, spring floods, endless summer light. We build for all of it.',
-      quoteAttribution: '— Mike Rogers, Co-Founder',
+      quoteAttribution: '— Keelan Rogers, Co-Founder',
     },
     locations: {
       title: 'Across the Helsinki region.',

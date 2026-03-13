@@ -10,7 +10,6 @@ import {
   ChevronRight,
   MapPin,
   Phone,
-  Clock,
   ArrowRight,
   Quote,
   Shield,
@@ -28,26 +27,7 @@ const serviceIcons = [
   <Zap className="w-10 h-10" />,
 ]
 
-const locations = [
-  {
-    city: 'Helsinki',
-    address: 'Aleksanterinkatu 28',
-    phone: '+358 44 2481210',
-    hours: 'Ma–Pe 7:00–17:00',
-  },
-  {
-    city: 'Espoo',
-    address: 'Leppävaarankatu 12',
-    phone: '+358 44 2481210',
-    hours: 'Ma–Pe 7:00–17:00',
-  },
-  {
-    city: 'Vantaa',
-    address: 'Tikkurilantie 44',
-    phone: '+358 44 2481210',
-    hours: 'Ma–Pe 7:00–17:00',
-  },
-]
+const locations = ['Helsinki', 'Espoo', 'Vantaa']
 
 function HomePage() {
   const { t } = useLocale()
@@ -213,28 +193,17 @@ function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {locations.map((loc) => (
+            {locations.map((city) => (
               <div
-                key={loc.city}
+                key={city}
                 className="bg-white border border-cream-200 rounded-xl p-8 text-center hover:shadow-lg hover:shadow-saddle-200/50 transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="w-14 h-14 bg-rust-50 rounded-full flex items-center justify-center mx-auto mb-5">
                   <MapPin className="w-6 h-6 text-rust-500" />
                 </div>
-                <h3 className="text-2xl font-semibold text-saddle-900 mb-4 font-[var(--font-display)]">
-                  {loc.city}
+                <h3 className="text-2xl font-semibold text-saddle-900 font-[var(--font-display)]">
+                  {city}
                 </h3>
-                <div className="space-y-2 text-saddle-600 text-sm">
-                  <p>{loc.address}</p>
-                  <p className="flex items-center justify-center gap-1.5">
-                    <Phone size={13} />
-                    {loc.phone}
-                  </p>
-                  <p className="flex items-center justify-center gap-1.5">
-                    <Clock size={13} />
-                    {loc.hours}
-                  </p>
-                </div>
               </div>
             ))}
           </div>

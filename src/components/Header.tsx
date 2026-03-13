@@ -40,14 +40,14 @@ export default function Header() {
             className="flex items-center text-xs font-semibold tracking-wider border border-cream-300 rounded-full overflow-hidden"
           >
             <span
-              className={`px-2.5 py-1.5 transition-colors ${locale === 'fi' ? 'bg-saddle-800 text-cream-50' : 'text-saddle-600 hover:bg-cream-200'}`}
-            >
-              FI
-            </span>
-            <span
               className={`px-2.5 py-1.5 transition-colors ${locale === 'en' ? 'bg-saddle-800 text-cream-50' : 'text-saddle-600 hover:bg-cream-200'}`}
             >
               EN
+            </span>
+            <span
+              className={`px-2.5 py-1.5 transition-colors ${locale === 'fi' ? 'bg-saddle-800 text-cream-50' : 'text-saddle-600 hover:bg-cream-200'}`}
+            >
+              FI
             </span>
           </button>
 
