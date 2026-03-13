@@ -1,7 +1,10 @@
 import { Link } from '@tanstack/react-router'
 import { Instagram, Facebook, Phone, Mail, MapPin } from 'lucide-react'
+import { useLocale } from '@/i18n'
 
 export default function Footer() {
+  const { t } = useLocale()
+
   return (
     <footer className="bg-saddle-900 text-cream-100">
       <div className="max-w-6xl mx-auto px-6 py-16">
@@ -15,76 +18,51 @@ export default function Footer() {
               />
             </Link>
             <p className="text-cream-200 text-sm leading-relaxed">
-              Rogers &amp; Jones is a Helsinki-based contractor specialising in
-              construction, renovation, and plumbing across Finland&apos;s
-              capital region.
+              {t.footer.description}
             </p>
           </div>
 
           <div>
             <h4 className="text-cream-50 font-semibold mb-4 uppercase text-sm tracking-wider">
-              Services
+              {t.footer.servicesHeading}
             </h4>
             <ul className="space-y-2 text-sm text-cream-200">
-              <li>
-                <a href="#services" className="hover:text-rust-400 transition-colors">
-                  Construction &amp; Building
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-rust-400 transition-colors">
-                  Repairs &amp; Renovation
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-rust-400 transition-colors">
-                  Plumbing
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-rust-400 transition-colors">
-                  Emergency Call-Outs
-                </a>
-              </li>
+              {t.footer.serviceLinks.map((label) => (
+                <li key={label}>
+                  <a
+                    href="#services"
+                    className="hover:text-rust-400 transition-colors"
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
             <h4 className="text-cream-50 font-semibold mb-4 uppercase text-sm tracking-wider">
-              Company
+              {t.footer.companyHeading}
             </h4>
             <ul className="space-y-2 text-sm text-cream-200">
-              <li>
-                <a href="#about" className="hover:text-rust-400 transition-colors">
-                  Our Story
-                </a>
-              </li>
-              <li>
-                <a href="#locations" className="hover:text-rust-400 transition-colors">
-                  Locations
-                </a>
-              </li>
-              <li>
-                <a href="#reviews" className="hover:text-rust-400 transition-colors">
-                  Reviews
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-rust-400 transition-colors">
-                  Careers
-                </a>
-              </li>
+              {t.footer.companyLinks.map((label) => (
+                <li key={label}>
+                  <a href="#" className="hover:text-rust-400 transition-colors">
+                    {label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
             <h4 className="text-cream-50 font-semibold mb-4 uppercase text-sm tracking-wider">
-              Contact
+              {t.footer.contactHeading}
             </h4>
             <ul className="space-y-3 text-sm text-cream-200">
               <li className="flex items-center gap-2">
                 <Phone size={14} className="text-rust-400" />
-                <span>+358 9 555 0147</span>
+                <span>+358 44 2481210</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={14} className="text-rust-400" />
@@ -116,18 +94,17 @@ export default function Footer() {
 
         <div className="border-t border-saddle-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-cream-300 text-xs">
-            &copy; {new Date().getFullYear()} Rogers &amp; Jones Oy. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} {t.footer.copyright}
           </p>
           <div className="flex gap-6 text-xs text-cream-300">
             <a href="#" className="hover:text-rust-400 transition-colors">
-              Privacy Policy
+              {t.footer.privacyPolicy}
             </a>
             <a href="#" className="hover:text-rust-400 transition-colors">
-              Terms of Service
+              {t.footer.termsOfService}
             </a>
             <a href="#" className="hover:text-rust-400 transition-colors">
-              Accessibility
+              {t.footer.accessibility}
             </a>
           </div>
         </div>

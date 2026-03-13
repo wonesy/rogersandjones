@@ -2,6 +2,7 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 
+import { LocaleProvider } from '../i18n'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -39,14 +40,16 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="fi">
       <head>
         <HeadContent />
       </head>
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <LocaleProvider>
+          <Header />
+          {children}
+          <Footer />
+        </LocaleProvider>
         {import.meta.env.DEV && (
           <TanStackDevtools
             config={{
